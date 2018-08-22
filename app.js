@@ -3,6 +3,7 @@ $(document).ready(function(){
 
 
 let $register = $('#register');
+let $login = $('#login');
 let err = $('<div>', {class: 'err'}).text('u are not doing it right... try again');
 
 // switch login/register fields visibility 
