@@ -17,18 +17,21 @@
 	<div id="container">
 		
 		<h1>welcome to your account information storage</h1>
+		<h4>ugly version</h4>
 		<h3>here you can keep your informations (emails, passwords, avatars etc) of your accounts over the internet</h3>
 
 
 		<div id="login">
 				<br><br>	
 				<h3>login to continue</h3><br>
-			<form class="forms" action="login.php" method="POST">
+			<form class="forms" action="home.php" method="POST">
 				<label for="uname">username</label><br>
-   				<input type="text" placeholder="enter your username" name="uname" class="checkLog"><br><br>
+   				<input type="text" placeholder="enter your username" name="uname" id="logUname"><br><br>
 
-   				<label for="pass"  class="checkLog">password</label><br>
-   				<input type="password" placeholder="enter your password" name="pass"><br><br>
+   				<label for="pass" >password</label><br>
+   				<input type="password" placeholder="enter your password" name="pass" id="logPass">
+   				<div class="reveal">reveal</div>
+   				<br><br>
 
    				<button id="loginButton">login</button><br>	<br>	
    				<p>don't have account? <span class="switch">register for free</span></p>
@@ -43,7 +46,7 @@
 			<form  class="forms" action="register.php" method="POST">
 				<label for="uname">*username <br> <span class="small">(must be 6 chars min and 20 chars max)</span></label>
 				<br>
-				<input type="text" placeholder="enter your username" name="uname" id="uname">
+				<input type="text" placeholder="enter your username" name="uname" id="regUname">
 				<br><br>
 
 				<label for="email">*email</label><br>
@@ -55,11 +58,12 @@
 				<br><br>
 
 				<label for="pass">*password <br><span class="small">(must contain least 6 chars and include 1 number)</span></label><br>
-				<input type="password" placeholder="enter your password" name="pass" id="pass">
+				<input type="password" placeholder="enter your password" name="pass" id="regPass">
+				<div class="reveal">reveal</div>
 				<br><br>
 
 				<label for="pass">*confirm password</label><br>
-				<input type="password" placeholder="confirm password" name="confirmPass" id="passConfirm"><br><br>
+				<input type="password" placeholder="confirm password" name="passConfirm" id="passConfirm"><br><br>
 
 				<button id="regButton">register</button>
 				<br><br>
