@@ -84,6 +84,29 @@ $("#regButton").on('click', function(e){
 	}
 });
 
+//reveal password in input field on mousehold
+$('.reveal').on('mousedown', function(){
+	$(this).parent()
+	.find('input[name="pass"], input[name="passConfirm"]')
+	.attr('type', 'text');
+	$(this).text('hide');
+}).on('mouseup', function(){
+	$(this).parent()
+	.find('input[name="pass"], input[name="passConfirm"]')
+	.attr('type', 'password');
+	$(this).text('reveal');
+});
+
+// login form  check
+$('#loginButton').on('click', function(e){
+	if( !checkUname($('#logUname').val()) ||
+		!checkPassString($('#logPass').val(), $('#logPass').val())
+		){
+		e.preventDefault();
+		$login.append(err);
+	}
+});
+
 
 
 
